@@ -64,7 +64,7 @@ export function Passeios() {
                     </li>
                   </ul>
 
-                  <div className="mt-6 flex flex-col gap-2.5 pt-1">
+                  <div className="mt-auto flex flex-col gap-2.5 pt-6">
                     <button
                       type="button"
                       onClick={() => setSelected(tour)}
