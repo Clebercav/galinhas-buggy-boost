@@ -4,8 +4,8 @@ import tour6h from "@/assets/tour-6h.jpg";
 import tour8h from "@/assets/tour-8h.jpg";
 
 /** Troque pelo número real (formato internacional, apenas dígitos). */
-export const WHATSAPP_NUMBER = "5581999999999";
-export const INSTAGRAM_URL = "https://instagram.com";
+export const WHATSAPP_NUMBER = "5581997784354";
+export const INSTAGRAM_URL = "https://www.instagram.com/taxsimpasseiosetransfer/";
 
 export function whatsappLink(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;

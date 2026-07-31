@@ -36,8 +36,8 @@ export function Passeios() {
                   <img
                     src={tour.image}
                     alt={`${tour.name} de ${tour.duration} em Porto de Galinhas`}
-                    width={1024}
-                    height={768}
+                    width={600}
+                    height={388}
                     loading="lazy"
                     decoding="async"
                     className="size-full object-cover transition-transform duration-700 hover:scale-105"
@@ -94,8 +94,8 @@ export function Passeios() {
               <img
                 src={selected.image}
                 alt={`${selected.name} de ${selected.duration}`}
-                width={1024}
-                height={768}
+                width={600}
+                height={388}
                 loading="lazy"
                 className="aspect-video w-full rounded-2xl object-cover"
               />
