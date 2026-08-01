@@ -126,3 +126,51 @@ export const faqs = [
     a: "Chuvas rápidas são comuns no litoral e não impedem o passeio: o buggy tem capota. Em caso de chuva forte e persistente, remarcamos sem custo para outro horário ou dia.",
   },
 ];
+
+export const GOOGLE_REVIEW_URL = "https://g.page/r/Cf2PyP0hgrkIEBM/review";
+
+export type Testimonial = {
+  name: string;
+  origin: string;
+  rating: number;
+  text: string;
+};
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "Juliana Martins",
+    origin: "São Paulo/SP",
+    rating: 5,
+    text: "Fizemos o passeio de 4 horas e foi o melhor dia da viagem. Bugueiro super atencioso, parou em todas as praias que pedimos e ainda tirou várias fotos nossas.",
+  },
+  {
+    name: "Rafael Andrade",
+    origin: "Belo Horizonte/MG",
+    rating: 5,
+    text: "Atendimento pelo WhatsApp foi rápido e sem enrolação. Buggy limpo, pontual e o roteiro Ponta a Ponta valeu cada minuto. Recomendo demais!",
+  },
+  {
+    name: "Camila e Diego",
+    origin: "Curitiba/PR",
+    rating: 5,
+    text: "Escolhemos o passeio privativo de 6 horas para comemorar nossa lua de mel. Tivemos total liberdade de horário e praias desertas maravilhosas.",
+  },
+  {
+    name: "Patrícia Lopes",
+    origin: "Brasília/DF",
+    rating: 5,
+    text: "Viajamos com duas crianças e nos sentimos muito seguros. O bugueiro dirigiu com cuidado e adaptou o ritmo para a família. Experiência impecável.",
+  },
+  {
+    name: "Marcos Vinícius",
+    origin: "Rio de Janeiro/RJ",
+    rating: 5,
+    text: "A Super Diária de 8 horas é surreal. Conhecemos praias que nenhum passeio curto alcança e ainda paramos para almoçar com o pé na areia.",
+  },
+  {
+    name: "Fernanda Duarte",
+    origin: "Porto Alegre/RS",
+    rating: 5,
+    text: "Preço justo, sem pagamento antecipado e tudo exatamente como combinado. A TAXSIM passou muita confiança do primeiro contato até o fim do passeio.",
+  },
+];
