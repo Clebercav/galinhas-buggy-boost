@@ -46,6 +46,22 @@ export const Route = createFileRoute("/")({
               name: "Passeio de Buggy em Porto de Galinhas",
               description: DESCRIPTION,
               touristType: ["Famílias", "Casais", "Grupos"],
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5",
+                bestRating: "5",
+                ratingCount: String(testimonials.length),
+              },
+              review: testimonials.map((t) => ({
+                "@type": "Review",
+                author: { "@type": "Person", name: t.name },
+                reviewRating: {
+                  "@type": "Rating",
+                  ratingValue: String(t.rating),
+                  bestRating: "5",
+                },
+                reviewBody: t.text,
+              })),
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Porto de Galinhas",
