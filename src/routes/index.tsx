@@ -5,11 +5,12 @@ import { Diferenciais } from "@/components/sections/Diferenciais";
 import { Passeios } from "@/components/sections/Passeios";
 import { PorQue } from "@/components/sections/PorQue";
 import { Galeria } from "@/components/sections/Galeria";
+import { Depoimentos } from "@/components/sections/Depoimentos";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { Faq } from "@/components/sections/Faq";
 import { SiteFooter } from "@/components/sections/SiteFooter";
 import { WhatsAppFloat } from "@/components/WhatsAppButton";
-import { faqs, tours } from "@/lib/site";
+import { faqs, testimonials, tours } from "@/lib/site";
 
 const TITLE = "Passeio de Buggy em Porto de Galinhas | 2h, 4h, 6h e 8h";
 const DESCRIPTION =
@@ -45,6 +46,22 @@ export const Route = createFileRoute("/")({
               name: "Passeio de Buggy em Porto de Galinhas",
               description: DESCRIPTION,
               touristType: ["Famílias", "Casais", "Grupos"],
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5",
+                bestRating: "5",
+                ratingCount: String(testimonials.length),
+              },
+              review: testimonials.map((t) => ({
+                "@type": "Review",
+                author: { "@type": "Person", name: t.name },
+                reviewRating: {
+                  "@type": "Rating",
+                  ratingValue: String(t.rating),
+                  bestRating: "5",
+                },
+                reviewBody: t.text,
+              })),
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Porto de Galinhas",
@@ -84,6 +101,7 @@ function Index() {
         <Passeios />
         <PorQue />
         <Galeria />
+        <Depoimentos />
         <CtaSection />
         <Faq />
       </main>
