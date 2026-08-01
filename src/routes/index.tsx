@@ -101,6 +101,7 @@ function Index() {
         <Passeios />
         <PorQue />
         <Galeria />
+        <Depoimentos />
         <CtaSection />
         <Faq />
       </main>
