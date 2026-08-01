@@ -5,11 +5,12 @@ import { Diferenciais } from "@/components/sections/Diferenciais";
 import { Passeios } from "@/components/sections/Passeios";
 import { PorQue } from "@/components/sections/PorQue";
 import { Galeria } from "@/components/sections/Galeria";
+import { Depoimentos } from "@/components/sections/Depoimentos";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { Faq } from "@/components/sections/Faq";
 import { SiteFooter } from "@/components/sections/SiteFooter";
 import { WhatsAppFloat } from "@/components/WhatsAppButton";
-import { faqs, tours } from "@/lib/site";
+import { faqs, testimonials, tours } from "@/lib/site";
 
 const TITLE = "Passeio de Buggy em Porto de Galinhas | 2h, 4h, 6h e 8h";
 const DESCRIPTION =
