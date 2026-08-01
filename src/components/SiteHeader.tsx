@@ -7,6 +7,7 @@ const navItems = [
   { label: "Passeios", href: "/#passeios" },
   { label: "Diferenciais", href: "/#diferenciais" },
   { label: "Galeria", href: "/#galeria" },
+  { label: "Depoimentos", href: "/#depoimentos" },
   { label: "Dúvidas", href: "/#faq" },
 ];
 
