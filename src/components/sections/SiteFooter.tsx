@@ -23,6 +23,7 @@ export function SiteFooter() {
             <li><a href="/#passeios" className="hover:text-gold">Passeios</a></li>
             <li><a href="/#diferenciais" className="hover:text-gold">Diferenciais</a></li>
             <li><a href="/#galeria" className="hover:text-gold">Galeria</a></li>
+            <li><a href="/#depoimentos" className="hover:text-gold">Depoimentos</a></li>
             <li><a href="/#faq" className="hover:text-gold">Perguntas frequentes</a></li>
             <li>
               <Link to="/politica-de-privacidade" className="hover:text-gold">
