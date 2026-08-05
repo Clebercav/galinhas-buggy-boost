@@ -66,7 +66,7 @@ export const tours: Tour[] = [
     description:
       "Banhos de mar, fotos e paisagens incríveis. Com seis horas você percorre todo o litoral com calma, almoça em uma praia à sua escolha e ainda sobra tempo para relaxar.",
     image: tour6h,
-    highlights: ["Muro Alto", "Serrambi", "Maracaípe", "Pontal"],
+    highlights: ["Muro Alto", "Pontal Cupe", "Maracaípe", "Pontal Maracaípe"],
     includes: [
       "Buggy privativo para o seu grupo",
       "Tempo estendido em cada parada",
