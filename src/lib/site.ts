@@ -80,9 +80,9 @@ export const tours: Tour[] = [
     duration: "8 Horas",
     short: "O passeio mais completo.",
     description:
-      "Explore todo o litoral de Porto de Galinhas com tranquilidade. Do norte ao sul, incluindo praias mais distantes e desertas que os passeios curtos não alcançam.",
+      "Explore todo o litoral de Porto de Galinhas com tranquilidade. Do norte ao sul, incluindo praias mais distantes e desertas.",
     image: tour8h,
-    highlights: ["Muro Alto", "Serrambi", "Toquinho", "Praias desertas"],
+    highlights: ["Muro Alto", "Pontal do Cupe", "Maracaípe", "Pontal de Maracaípe"],
     includes: [
       "Buggy privativo o dia inteiro",
       "Roteiro completo do litoral, norte e sul",
