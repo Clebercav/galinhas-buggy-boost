@@ -34,11 +34,11 @@ export const tours: Tour[] = [
     description:
       "Passeio panorâmico pelas principais praias de Porto de Galinhas. Uma experiência rápida e intensa, perfeita para quem chegou hoje ou tem a tarde livre antes do voo.",
     image: tour2h,
-    highlights: ["Praia do Cupe", "Porto de Galinhas", "Vila e mirantes"],
+    highlights: ["Praia do Cupe", "Porto de Galinhas", "Vila (Panorâmico)"],
     includes: [
       "Buggy privativo para o seu grupo",
-      "Bugueiro credenciado pela associação local",
-      "Paradas para fotos nos melhores pontos",
+      "Bugueiro credenciado pela prefeitura",
+      "Paradas para fotos coqueirais de Maracaípe",
       "Roteiro panorâmico pelas praias centrais",
     ],
   },
