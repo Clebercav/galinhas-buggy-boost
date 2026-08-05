@@ -98,7 +98,7 @@ export function PhoneMockup({ className }: { className?: string }) {
               muted
               loop
               playsInline
-              preload="auto"
+              preload="none"
               className="absolute inset-0 z-10 size-full object-cover"
             >
               <source src={videoWebm.url} type="video/webm" />
