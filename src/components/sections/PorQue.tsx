@@ -21,7 +21,7 @@ export function PorQue() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:gap-16 lg:px-8">
         <Reveal>
           <img
-            src={whyImg}
+            src={whyImg.url}
             alt="Casal em um buggy amarelo ao pôr do sol em Porto de Galinhas"
             width={1200}
             height={1400}
