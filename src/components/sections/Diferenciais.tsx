@@ -7,7 +7,7 @@ const items = [
   { icon: ShieldCheck, title: "Bugueiros Credenciados", text: "Profissionais registrados, experientes e conhecedores do litoral." },
   { icon: CalendarDays, title: "Saídas Diárias", text: "Todos os dias, no horário que melhor encaixa na sua viagem." },
   { icon: Sparkles, title: "Passeios Personalizados", text: "Roteiro ajustado ao seu ritmo e às praias que você quer conhecer." },
-  { icon: Camera, title: "Paradas para Fotos", text: "Os melhores mirantes e cenários do litoral, com tempo para registrar." },
+  { icon: Camera, title: "Paradas para Fotos", text: "Os melhores cenários do litoral, com tempo para registrar." },
 ];
 
 export function Diferenciais() {

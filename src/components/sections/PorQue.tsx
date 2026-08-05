@@ -1,5 +1,5 @@
 import { Check } from "lucide-react";
-import whyImg from "@/assets/why-buggy.jpg";
+import whyImg from "@/assets/passeio-mais-popular-em-porto-de-galinhas.jpg.asset.json";
 import { Reveal } from "@/components/Reveal";
 import { WhatsAppLink } from "@/components/WhatsAppButton";
 
@@ -21,8 +21,8 @@ export function PorQue() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:gap-16 lg:px-8">
         <Reveal>
           <img
-            src={whyImg}
-            alt="Grupo de amigos sorrindo em um buggy amarelo na areia branca de Porto de Galinhas"
+            src={whyImg.url}
+            alt="Casal em um buggy amarelo ao pôr do sol em Porto de Galinhas"
             width={1200}
             height={1400}
             loading="lazy"
