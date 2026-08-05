@@ -1,22 +1,20 @@
 import { useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import muroAlto from "@/assets/gal-muro-alto.jpg";
-import cupe from "@/assets/gal-cupe.jpg";
-import porto from "@/assets/gal-porto.jpg";
-import maracaipe from "@/assets/gal-maracaipe.jpg";
-import pontal from "@/assets/gal-pontal.jpg";
-import turistas from "@/assets/gal-turistas.jpg";
-import buggyAreia from "@/assets/tour-2h.jpg";
+import casalBuggy from "@/assets/buggy-em-porto-de-galinhas-em-maracaipe-coqueiros.jpg.asset.json";
+import familiaCoqueiros from "@/assets/buggy-em-porto-de-galinhas-em-maracaipe-coqueiros-maracaipe-em-familia.jpg.asset.json";
+import grupoPraia from "@/assets/passeio-de-buggy-em-porto-de-galinhas-em-grupo.jpg.asset.json";
+import grupoCoqueiros from "@/assets/passeio-de-buggy-em-porto-de-galinhas-em-grupo-coqueiros-de-maracaipe.jpg.asset.json";
+import grupoPonta from "@/assets/passeio-de-buggy-em-porto-de-galinhas-em-grupo-coqueiros-de-maracaipe-ponta.jpg.asset.json";
+import grupoMuroAlto from "@/assets/passeio-de-buggy-em-porto-de-galinhas-em-grupo-muro-alto.jpg.asset.json";
 
 const photos = [
-  { src: muroAlto, alt: "Piscina natural de Muro Alto vista de cima", label: "Muro Alto", w: 1024, h: 1024 },
-  { src: cupe, alt: "Praia do Cupe com coqueiros e mar azul", label: "Praia do Cupe", w: 1024, h: 768 },
-  { src: porto, alt: "Piscinas naturais de Porto de Galinhas com jangadas", label: "Porto de Galinhas", w: 1024, h: 1280 },
-  { src: maracaipe, alt: "Praia de Maracaípe com ondas e coqueiros", label: "Maracaípe", w: 1024, h: 768 },
-  { src: pontal, alt: "Pontal de Maracaípe ao pôr do sol com manguezais", label: "Pontal de Maracaípe", w: 1024, h: 1280 },
-  { src: buggyAreia, alt: "Buggy estacionado na areia branca diante do mar", label: "Buggy na areia", w: 1024, h: 768 },
-  { src: turistas, alt: "Turistas sorrindo durante o passeio de buggy na beira do mar", label: "Turistas no passeio", w: 1024, h: 768 },
+  { src: casalBuggy.url, alt: "Casal posando em buggy amarelo sob os coqueiros de Maracaípe", label: "Coqueiros de Maracaípe", w: 600, h: 390 },
+  { src: grupoPraia.url, alt: "Grupo comemorando ao lado dos buggies na beira da praia", label: "Passeio em grupo", w: 600, h: 390 },
+  { src: familiaCoqueiros.url, alt: "Família em cima dos buggies na estrada de coqueiros de Maracaípe", label: "Maracaípe em família", w: 600, h: 390 },
+  { src: grupoCoqueiros.url, alt: "Amigos posando entre dois buggies na estrada dos coqueiros", label: "Estrada dos coqueiros", w: 600, h: 390 },
+  { src: grupoMuroAlto.url, alt: "Grupo animado em buggy vermelho em Muro Alto", label: "Muro Alto", w: 600, h: 390 },
+  { src: grupoPonta.url, alt: "Quatro buggies enfileirados com turistas no Pontal de Maracaípe", label: "Pontal de Maracaípe", w: 600, h: 390 },
 ];
 
 export function Galeria() {
