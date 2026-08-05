@@ -48,10 +48,17 @@ export function PhoneMockup({ className }: { className?: string }) {
       observer.observe(container);
     }
 
+    // Fallback de interação: toca ao passar o mouse ou tocar no celular.
+    const onEnter = () => tryPlay();
+    container.addEventListener("mouseenter", onEnter);
+    container.addEventListener("touchstart", onEnter, { passive: true });
+
     return () => {
       video.removeEventListener("play", onPlay);
       video.removeEventListener("pause", onPause);
       video.removeEventListener("canplay", onCanPlay);
+      container.removeEventListener("mouseenter", onEnter);
+      container.removeEventListener("touchstart", onEnter);
       observer?.disconnect();
     };
   }, []);
