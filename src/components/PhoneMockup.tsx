@@ -1,17 +1,25 @@
-import { useEffect, useId, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { cn } from "@/lib/utils";
 import videoMp4 from "@/assets/buggy-video-hero.mp4.asset.json";
 import videoWebm from "@/assets/buggy-video-hero.webm.asset.json";
 import posterImg from "@/assets/buggy-video-poster.jpg.asset.json";
 
 export function PhoneMockup({ className }: { className?: string }) {
-  const id = useId();
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return;
+    const container = containerRef.current;
+    if (!video || !container) return;
 
-    const playVideo = () => {
+    const onPlay = () => setIsPlaying(true);
+    const onPause = () => setIsPlaying(false);
+    video.addEventListener("play", onPlay);
+    video.addEventListener("pause", onPause);
+
+    const tryPlay = () => {
       if (video.paused) {
         video.play().catch(() => {
           // Autoplay bloqueado pelo navegador; o poster permanece visível.
@@ -19,20 +27,38 @@ export function PhoneMockup({ className }: { className?: string }) {
       }
     };
 
-    video.addEventListener("loadeddata", playVideo);
-    video.addEventListener("canplay", playVideo);
+    // Tenta tocar assim que possível.
+    tryPlay();
 
-    // Tentativa inicial caso o vídeo já esteja pronto.
-    playVideo();
+    // Retenta quando o vídeo estiver pronto.
+    const onCanPlay = () => tryPlay();
+    video.addEventListener("canplay", onCanPlay);
+
+    // Toca quando o celular entrar na viewport.
+    let observer: IntersectionObserver | null = null;
+    if ("IntersectionObserver" in window) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) tryPlay();
+          });
+        },
+        { threshold: 0.25 }
+      );
+      observer.observe(container);
+    }
 
     return () => {
-      video.removeEventListener("loadeddata", playVideo);
-      video.removeEventListener("canplay", playVideo);
+      video.removeEventListener("play", onPlay);
+      video.removeEventListener("pause", onPause);
+      video.removeEventListener("canplay", onCanPlay);
+      observer?.disconnect();
     };
   }, []);
 
   return (
     <div
+      ref={containerRef}
       className={className}
       aria-label="Vídeo do passeio de buggy em Porto de Galinhas"
     >
@@ -45,20 +71,28 @@ export function PhoneMockup({ className }: { className?: string }) {
         {/* Phone frame */}
         <div className="relative overflow-hidden rounded-[2.5rem] border-[6px] border-navy-foreground/20 bg-navy p-1 shadow-2xl shadow-navy/40 backdrop-blur-sm">
           {/* Notch */}
-          <div className="absolute left-1/2 top-2 z-10 h-5 w-20 -translate-x-1/2 rounded-full bg-navy-foreground/20" />
+          <div className="absolute left-1/2 top-2 z-20 h-5 w-20 -translate-x-1/2 rounded-full bg-navy-foreground/20" />
 
           {/* Screen */}
           <div className="relative aspect-[9/19.5] overflow-hidden rounded-[2rem] bg-navy">
+            {/* Static poster fallback — stays visible until the video actually plays */}
+            <img
+              src={posterImg.url}
+              alt=""
+              aria-hidden="true"
+              className={cn(
+                "absolute inset-0 z-0 size-full object-cover transition-opacity duration-500",
+                isPlaying ? "opacity-0" : "opacity-100"
+              )}
+            />
             <video
               ref={videoRef}
-              id={id}
               autoPlay
               muted
               loop
               playsInline
               preload="auto"
-              poster={posterImg.url}
-              className="absolute inset-0 size-full object-cover"
+              className="absolute inset-0 z-10 size-full object-cover"
             >
               <source src={videoWebm.url} type="video/webm" />
               <source src={videoMp4.url} type="video/mp4" />
