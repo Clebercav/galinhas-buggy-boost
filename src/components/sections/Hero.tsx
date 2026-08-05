@@ -1,5 +1,6 @@
 import heroImg from "@/assets/hero-buggy.jpg";
 import { WhatsAppLink } from "@/components/WhatsAppButton";
+import { PhoneMockup } from "@/components/PhoneMockup";
 
 export function Hero() {
   return (
