@@ -29,7 +29,7 @@ export const tours: Tour[] = [
   {
     id: "2h",
     name: "Passeio de Buggy",
-    duration: "2 Horas",
+    duration: "2 Horas\u00a0 R$350",
     short: "Ideal para quem possui pouco tempo.",
     description:
       "Passeio panorâmico pelas principais praias de Porto de Galinhas. Uma experiência rápida e intensa, perfeita para quem chegou hoje ou tem a tarde livre antes do voo.",
@@ -45,7 +45,7 @@ export const tours: Tour[] = [
   {
     id: "4h",
     name: "Passeio de Buggy",
-    duration: "4 Horas",
+    duration: "4 Horas R$450",
     short: 'O tradicional passeio "Ponta a Ponta".',
     description:
       "Conheça Muro Alto, Cupe, Porto de Galinhas, Maracaípe e Pontal de Maracaípe. O roteiro mais pedido de Porto de Galinhas, com tempo para banho de mar e fotos em cada praia.",
@@ -61,7 +61,7 @@ export const tours: Tour[] = [
   {
     id: "6h",
     name: "Passeio de Buggy",
-    duration: "6 Horas",
+    duration: "6 Horas R$550",
     short: "Mais tempo para aproveitar cada parada.",
     description:
       "Banhos de mar, fotos e paisagens incríveis. Com seis horas você percorre todo o litoral com calma, almoça em uma praia à sua escolha e ainda sobra tempo para relaxar.",
@@ -77,7 +77,7 @@ export const tours: Tour[] = [
   {
     id: "8h",
     name: "Super Diária",
-    duration: "8 Horas",
+    duration: "8 Horas R$650",
     short: "O passeio mais completo.",
     description:
       "Explore todo o litoral de Porto de Galinhas com tranquilidade. Do norte ao sul, incluindo praias mais distantes e desertas.",
