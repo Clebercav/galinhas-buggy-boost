@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
 import { WhatsAppLink } from "@/components/WhatsAppButton";
+import { BrandLogo } from "@/components/BrandLogo";
 
 const navItems = [
   { label: "Passeios", href: "/#passeios" },
@@ -28,15 +29,9 @@ export function SiteHeader() {
         scrolled ? "bg-background/90 shadow-soft backdrop-blur-md" : "bg-transparent",
       )}
     >
-      <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 sm:flex sm:justify-between lg:px-8">
-        <Link
-          to="/"
-          className={cn(
-            "min-w-0 font-display text-lg font-extrabold tracking-tight transition-colors sm:text-xl",
-            scrolled ? "text-foreground" : "text-navy-foreground",
-          )}
-        >
-          Buggy<span className="text-gold">PortoDeGalinhas</span>
+      <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 sm:flex sm:justify-between lg:px-8">
+        <Link to="/" className="min-w-0 transition-opacity hover:opacity-90">
+          <BrandLogo inverse={!scrolled} size="md" />
         </Link>
 
         <nav aria-label="Navegação principal" className="hidden items-center gap-8 lg:flex">
