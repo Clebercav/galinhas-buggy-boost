@@ -69,7 +69,7 @@ export function PhoneMockup({ className }: { className?: string }) {
       className={className}
       aria-label="Vídeo do passeio de buggy em Porto de Galinhas"
     >
-      <div className="relative mx-auto w-[260px] sm:w-[300px] lg:w-[340px]">
+      <div className="relative mx-auto w-[208px] sm:w-[240px] lg:w-[272px]">
         {/* Side buttons */}
         <div className="absolute -left-[3px] top-[18%] h-8 w-[3px] rounded-l-sm bg-navy-foreground/40" />
         <div className="absolute -left-[3px] top-[28%] h-14 w-[3px] rounded-l-sm bg-navy-foreground/40" />
