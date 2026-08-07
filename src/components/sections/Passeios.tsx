@@ -75,7 +75,7 @@ export function Passeios() {
                     <WhatsAppLink
                       size="md"
                       className="w-full py-3"
-                      message={`Olá! Quero reservar o passeio de buggy de ${tour.duration} em Porto de Galinhas.`}
+                      message={whatsappTourMessage(tour)}
                     >
                       Reservar
                     </WhatsAppLink>
@@ -128,7 +128,7 @@ export function Passeios() {
 
               <WhatsAppLink
                 className="w-full"
-                message={`Olá! Quero reservar o passeio de buggy de ${selected.duration} em Porto de Galinhas.`}
+                message={whatsappTourMessage(selected)}
               >
                 Reservar pelo WhatsApp
               </WhatsAppLink>
