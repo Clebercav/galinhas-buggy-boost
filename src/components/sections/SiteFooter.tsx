@@ -2,15 +2,14 @@ import { Link } from "@tanstack/react-router";
 import { Instagram } from "lucide-react";
 import { INSTAGRAM_URL, DEFAULT_WHATSAPP_MESSAGE, whatsappLink } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/WhatsAppButton";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export function SiteFooter() {
   return (
     <footer className="bg-gradient-deep text-navy-foreground">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div className="sm:col-span-2">
-          <p className="font-display text-xl font-extrabold">
-            Buggy<span className="text-gold">PortoDeGalinhas</span>
-          </p>
+          <BrandLogo inverse size="lg" />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-navy-foreground/75">
             Passeios de buggy privativos em Porto de Galinhas, Pernambuco. Roteiros de 2, 4, 6 e 8
             horas com bugueiros credenciados e até 4 pessoas por veículo.
@@ -71,7 +70,7 @@ export function SiteFooter() {
 
       <div className="border-t border-navy-foreground/15">
         <p className="mx-auto max-w-7xl px-5 py-6 text-center text-xs text-navy-foreground/60 lg:px-8">
-          © {new Date().getFullYear()} Buggy Porto de Galinhas. Todos os direitos reservados.
+          © {new Date().getFullYear()} TAXSIM PASSEIOS E TRANSFER. Todos os direitos reservados.
         </p>
       </div>
     </footer>
