@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Check, Clock, Users } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { WhatsAppLink } from "@/components/WhatsAppButton";
-import { tours, type Tour } from "@/lib/site";
+import { tours, type Tour, whatsappTourMessage } from "@/lib/site";
 import {
   Dialog,
   DialogContent,
