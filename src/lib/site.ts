@@ -25,6 +25,10 @@ export type Tour = {
   includes: string[];
 };
 
+export function whatsappTourMessage(tour: Tour) {
+  return `Olá! Quero reservar o ${tour.name} de ${tour.duration} em Porto de Galinhas.`;
+}
+
 export const tours: Tour[] = [
   {
     id: "2h",
