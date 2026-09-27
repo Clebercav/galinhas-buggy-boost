@@ -7,7 +7,7 @@
  * Para hospedagem estática, gere uma nova cópia do site após preencher os IDs.
  */
 export const trackingIds = {
-  googleTag: "",
+  googleTag: "AW-18120788276",
   googleTagManager: "",
   metaPixel: "",
 };

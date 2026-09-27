@@ -9,4 +9,5 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-- Keep optional Google/Meta tracking IDs in `src/lib/tracking.ts` and emit validated IDs through the root route head, because all pages (including static exports) must share the same tags without exposing arbitrary script input.
+- Keep optional Google/Meta tracking IDs in `src/lib/tracking.ts` and validate them before client-side insertion, because all pages including static exports share tags without exposing arbitrary script input.
+- Load Google/Meta marketing tags only after the client-side regional consent decision; the head must not load them eagerly because it would transmit data before consent.

@@ -37,20 +37,27 @@ function Page() {
           </p>
           <h2 className="text-xl font-bold text-foreground">Dados coletados</h2>
           <p>
-            Coletamos apenas os dados que você nos envia voluntariamente pelo WhatsApp, como nome,
-            telefone, data desejada e número de passageiros, com a finalidade exclusiva de organizar
-            e confirmar o seu passeio.
+            Ao solicitar uma reserva pelo WhatsApp, você pode nos enviar nome, telefone, data desejada
+            e número de passageiros para organizar e confirmar o passeio. Se o rastreamento publicitário
+            estiver ativo, o Google Ads também pode receber endereço IP, identificadores de cookies,
+            informações do navegador e dispositivo e páginas visitadas.
           </p>
           <h2 className="text-xl font-bold text-foreground">Uso das informações</h2>
           <p>
-            As informações são utilizadas para responder à sua solicitação, confirmar a reserva e
-            prestar suporte durante o passeio. Não vendemos nem compartilhamos seus dados com
-            terceiros para fins de marketing.
+            Os dados da reserva são usados para responder, confirmar e prestar suporte ao passeio.
+            Não enviamos nome, telefone ou dados da conversa ao Google Ads. Dados de navegação podem
+            ser compartilhados com o Google LLC para medir anúncios e otimizar publicidade, conforme
+            sua escolha de cookies e as regras aplicáveis à sua região.
           </p>
-          <h2 className="text-xl font-bold text-foreground">Cookies e métricas</h2>
+          <h2 className="text-xl font-bold text-foreground">Cookies e publicidade</h2>
           <p>
-            Podemos utilizar cookies e ferramentas de análise para entender o desempenho do site e
-            melhorar a experiência de navegação. Você pode desativar os cookies no seu navegador.
+            Em regiões que exigem consentimento, a publicidade só é ativada após você aceitar no aviso.
+            Você pode recusar com a mesma facilidade. Nas demais regiões, a medição pode funcionar sem
+            o aviso, respeitando recusas anteriores e sinais de desativação do navegador. Registramos
+            no seu navegador a escolha, data, versão do aviso e opções apresentadas. Use “Configurações
+            de cookies” no rodapé para mudar a escolha a qualquer momento; a recusa interrompe o
+            rastreamento nas próximas visitas e recarrega a página para interromper as tags já abertas.
+            Você também pode limitar anúncios nas configurações do Google e no seu navegador.
           </p>
           <h2 className="text-xl font-bold text-foreground">Seus direitos</h2>
           <p>
