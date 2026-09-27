@@ -73,11 +73,12 @@ export async function needsConsentBanner(): Promise<boolean> {
 
 let installed = false;
 export function enableMarketing() {
-  if (installed || navigator.globalPrivacyControl === true) return;
+  if (installed || (navigator as Navigator & { globalPrivacyControl?: boolean }).globalPrivacyControl === true) return;
   if (readConsent() === "rejected") return;
   installed = true;
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function (...args: unknown[]) { window.dataLayer?.push(args); };
+  window.gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "denied" });
   window.gtag("consent", "update", { ad_storage: "granted", ad_user_data: "granted", ad_personalization: "granted", analytics_storage: "denied" });
   if (googleTagId) {
     const script = document.createElement("script");

@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { INSTAGRAM_URL, DEFAULT_WHATSAPP_MESSAGE, whatsappLink } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/WhatsAppButton";
 import { BrandLogo } from "@/components/BrandLogo";
@@ -34,6 +35,7 @@ export function SiteFooter() {
                 Termos de Uso
               </Link>
             </li>
+            <li><Button variant="link" className="h-auto p-0 text-navy-foreground/80 hover:text-gold" onClick={() => window.dispatchEvent(new Event("open-cookie-settings"))}>Configurações de cookies</Button></li>
           </ul>
         </nav>
 
