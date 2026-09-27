@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram } from "lucide-react";
+import { Instagram, Phone } from "lucide-react";
 import { INSTAGRAM_URL, DEFAULT_WHATSAPP_MESSAGE, whatsappLink } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/WhatsAppButton";
 import { BrandLogo } from "@/components/BrandLogo";
@@ -51,6 +51,18 @@ export function SiteFooter() {
                 WhatsApp
               </a>
             </li>
+            {[
+              { label: "81 99778-4354", href: "tel:+5581997784354" },
+              { label: "81 99222-0859", href: "tel:+5581992220859" },
+              { label: "81 99433-8836", href: "tel:+5581994338836" },
+            ].map(({ label, href }) => (
+              <li key={href}>
+                <a href={href} className="inline-flex items-center gap-2 hover:text-gold">
+                  <Phone className="size-4" aria-hidden="true" />
+                  {label}
+                </a>
+              </li>
+            ))}
             <li>
               <a
                 href={INSTAGRAM_URL}
