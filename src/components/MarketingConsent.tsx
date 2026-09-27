@@ -20,7 +20,6 @@ export function MarketingConsent() {
       const saved = readConsent();
       setChoice(saved);
       if (saved === "accepted" || (!regulated && saved !== "rejected")) enableMarketing();
-      if (regulated && saved === null) setVisible(true);
     });
     return () => {
       active = false;

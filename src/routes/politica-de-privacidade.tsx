@@ -51,11 +51,12 @@ function Page() {
           </p>
           <h2 className="text-xl font-bold text-foreground">Cookies e publicidade</h2>
           <p>
-            Em regiões que exigem consentimento, a publicidade só é ativada após você aceitar no aviso.
-            Você pode recusar com a mesma facilidade. Nas demais regiões, a medição pode funcionar sem
-            o aviso, respeitando recusas anteriores e sinais de desativação do navegador. Registramos
-            no seu navegador a escolha, data, versão do aviso e opções apresentadas. Use “Configurações
-            de cookies” no rodapé para mudar a escolha a qualquer momento; a recusa interrompe o
+            Em regiões que exigem consentimento, a publicidade só é ativada se você aceitar nas
+            “Configurações de cookies” do rodapé. Você pode recusar com a mesma facilidade. Nas demais
+            regiões, a medição pode funcionar sem solicitar uma escolha, respeitando recusas anteriores
+            e sinais de desativação do navegador. Registramos no seu navegador a escolha, data, versão
+            das informações e opções apresentadas. Use “Configurações de cookies” no rodapé para mudar
+            a escolha a qualquer momento; a recusa interrompe o
             rastreamento nas próximas visitas e recarrega a página para interromper as tags já abertas.
             Você também pode limitar anúncios nas configurações do Google e no seu navegador.
           </p>
