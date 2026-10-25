@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { INSTAGRAM_URL, DEFAULT_WHATSAPP_MESSAGE, whatsappLink } from "@/lib/site";
 import { WhatsAppIcon } from "@/components/WhatsAppButton";
 import { BrandLogo } from "@/components/BrandLogo";
+import cadasturSeal from "@/assets/selo-cadastur.jpg.asset.json";
 
 export function SiteFooter() {
   return (
@@ -15,6 +16,16 @@ export function SiteFooter() {
             Passeios de buggy privativos em Porto de Galinhas, Pernambuco. Roteiros de 2, 4, 6 e 8
             horas com bugueiros credenciados e até 4 pessoas por veículo.
           </p>
+          <img
+            src={cadasturSeal.url}
+            alt="Selo Cadastur - Ministério do Turismo"
+            width={225}
+            height={49}
+            loading="lazy"
+            decoding="async"
+            className="mt-6 h-auto w-[225px] rounded"
+          />
+          <p className="mt-2 text-sm text-navy-foreground/80">Cadastur: 17.842227.91-2</p>
         </div>
 
         <nav aria-label="Links rápidos">
